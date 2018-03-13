@@ -17,10 +17,10 @@
 remote_theme: mmistakes/so-simple-theme
 locale: en-US
 title: "Ghostwheel"
-description: "Data Science and Viz"
-baseurl: # the subpath of your site, e.g. "/blog"
+description: "Data Science and Visualizations"
+baseurl:  # the subpath of your site, e.g. "/blog"
 url: # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-logo: # path of site logo, e.g. "/images/logo.png"
+logo: "/images/so-simple-site-logo.png" # path of site logo, e.g. "/images/logo.png"
 date_format: "%B %-d, %Y"
 read_time: # reading time estimates, e.g. true
 words_per_minute: # 200
@@ -53,9 +53,9 @@ feed:
 # Search
 search_full_content: false # can have performance implications for large sites
 
-# Taxonomoy pages
-# category_archive_path: "/categories/#"
-# tag_archive_path: "/tags/#"
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -75,6 +75,13 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
 
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:path/
+
+
 # Front Matter Defaults
 defaults:
   # Posts defaults
@@ -83,6 +90,14 @@ defaults:
       type: posts
     values:
       layout: post
+      share: true
+  # Recipe defaults
+  - scope:
+      path: "_recipes"
+      type: recipes
+    values:
+      layout: post
+      comments: true
       share: true
 
 # Site Author
