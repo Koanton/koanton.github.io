@@ -1,13 +1,8 @@
+
 ---
-title: Recipes
 layout: collection
-permalink: /recipes/
-collection: recipes
+excerpt: "A simple and clean responsive Jekyll theme for words and photos."
+show_excerpts: true
+paginate: true
 entries_layout: grid
 ---
-
-Sample document listing for the collection `_recipes`.
-
-
-
-
